@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!--Linkando arq. Jquery-->
+    <script src="jquery.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            //Caso o usuário clique no .bnt01 
+            //A Class PgAlistamento será aberta 
+            //E a .alistar será fechada.
+
+            $(".bnt01").click(function () {
+                $(".pgAlistamento").fadeIn();
+                $(".alistar").fadeOut();
+
+            });
+
+            //Caso o usuário clique no .bnt02 
+            //A Class .alistar será aberta 
+            //E a PgAlistamento será fechada.
+
+            $(".bnt02").click(function () {
+                $(".alistar").fadeIn();
+                $(".pgAlistamento").fadeOut();
+
+            });
+
+            //Caso o usuário clique no .bnt03 
+            // Um alert será mostrado com uma menságem p
+            // o usuário.
+
+            $(".bnt03").click(function () {
+                alert("Você desistiu!");
+
+            });
+
+
+        });
+
+    </script>
+
+
+</head>
+
+<body>
+
+
+    <!--Add uma div nova -->
+    <div class="alistar">
+
+        <img src="img/alista.jpg" title="fundo" alt="imagem">
+
+        <div class="botoes">
+            <button style="cursor:pointer;" class="bnt01">Desejo me alistar</button>
+            <button style="cursor:pointer;" class="bnt03">Não desejo me alistar</button>
+        </div>
+
+    </div>
+
+
+    <div class="pgAlistamento" style="display:none;">
+        <div class="fundo">
+            <img src="img/alista.jpg" title="fundo" alt="imagem">
+            <form id="form" name="form" method="post" action="">
+                <h1>Alistamento Online Forças Armadas</h1>
+                <legend>Bem vindo ao Alistamento online</legend>
+                <br>
+                <!--ADD O ATRIBUTO PLACEHOLDER EM TODOS OS INPUTS, 
+                FUNCIONA COMO SE FOSSE UMA DESCRIÇÃO DENTRO DO INPUT-->
+                <div class="linha">
+                    <label>Nome (Completo): <br>
+                        <input class="cor" name="nome" type="text" id="nome" size="40" placeholder="Nome">
+                    </label>
+                </div> <br>
+                <div class="linha">
+                    <label>Digite sua idade: <br>
+                        <input class="cor" name="idade" type="text" id="idade" size="40" placeholder="Idade">
+                    </label>
+                </div> <br>
+                <div class="linha">
+                    <label>Digite seu Email: <br>
+                        <input class="cor" name="email" type="text" id="email" size="40"placeholder="Email">
+                    </label>
+                </div> <br>
+                <div class="linha">
+                    <label>Digite seu CPF: <br>
+                        <input class="cor" name="cpf" type="text" id="cpf" size="40"placeholder="CPF">
+                    </label>
+                </div> <br>
+                <div class="linha">
+                    <label>Digite seu telefone para contato: <br>
+                        <input class="cor" name="telefone" type="text" id="telefone" size="40" placeholder="(XX)XXXX-XXXX">
+                    </label>
+                </div> <br>
+                <div class="linha">
+                    <label>Digite seu RA: <br>
+                        <input class="cor" name="ra" type="text" id="ra" size="40">
+                    </label>
+                </div> <br>
+                <div class="linha">
+                    <label><input name="receber" type="checkbox" id="receber" value="sim">
+                        Quero receber atualizações por Email <br>
+                </div>
+                </label> <br>
+                <div class="linha2">
+                    <label><input name="Enviar" type="Submit" id="Enviar" value="Enviar"></label>
+                    <label><input name="reset" type="reset" value="Limpar" /></label>
+                    </label>
+                </div>
+
+            </form>
+            <!--Add um botão para voltar a PG incial de alistamento-->
+
+        </div>
+        <button class="bnt02">VOLTAR</button>
+    </div>
+</body>
+
+</html>
